@@ -12,8 +12,9 @@
     ]
   },
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DeadlyCorpGame"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\DeadlyCorpGame\\Game.h",
   "PreviewInSolutionExplorer": false
 }
