@@ -1,13 +1,13 @@
-#ifndef
-#define
+#ifndef ITEM_H
+#define ITEM_H
 
 #include <string>
 
-public struct Item
+struct Item
 {
-	public std::string name;
-	public int price;
-	public float
+	std::string name;
+	int price;
+	float
 		scrapValueMultiplier,
 		explorerSurvivalChanceMultiplier,
 		operatorSurvivalChanceMultiplier;

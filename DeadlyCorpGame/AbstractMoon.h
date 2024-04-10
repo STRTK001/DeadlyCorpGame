@@ -1,5 +1,5 @@
-#ifndef
-#define
+#ifndef ABSTRACTMOON_H
+#define ABSTRACTMOON_H
 
 #include <string>
 

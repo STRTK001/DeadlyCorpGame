@@ -1,12 +1,12 @@
-#ifndef
-#define
+#ifndef WEATHER_H
+#define WEATHER_H
 
 #include <string>
 
-public struct Weather 
+struct Weather 
 {
-	public std::string name
-	public float
+	std::string name
+	float
 		scrapValueMultiplier,
 		explorerSurvivalChanceMultiplier,
 		operatorSurvivalChanceMultiplier;

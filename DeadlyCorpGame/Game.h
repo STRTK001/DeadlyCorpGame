@@ -2,6 +2,9 @@
 #define GAME_H
 
 #include <vector>
+#include "MoonManager.h"
+#include "ItemManager.h"
+#include "Employee.h"
 
 class Game
 {
@@ -16,12 +19,12 @@ private:
 	MoonManager moonManager;
 	ItemManager itemManager;
 	GamePhase gamePhase;
-	std::Vector<Employee*> aliveEmployees;
+	std::vector<Employee*> aliveEmployees;
 
 	void newGame();
 
-	
 
-}
+
+};
 
 #endif

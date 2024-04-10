@@ -1,8 +1,8 @@
-#ifndef
-#define
+#ifndef ITEMMANAGER_H
+#define ITEMMANAGER_H
 
-class ItemManager :
+class ItemManager
 {
 
-}
+};
 #endif

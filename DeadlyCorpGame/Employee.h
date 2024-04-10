@@ -1,10 +1,10 @@
-#ifndef
-#define
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
 
-public struct Employee
+struct Employee
 {
-	public int id;
-	public bool isAlive;
+	int id;
+	bool isAlive;
 };
 
 #endif
