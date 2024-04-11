@@ -7,6 +7,12 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello CMake." << endl;
+	//set the logger to on/off
+	Logger::setActive(true);
+	
+	Logger::logDebug("hello world!");
+	Game game = Game();
+	game.newGame();
+	Logger::logDebug("bye world!");
 	return 0;
 }

@@ -91,6 +91,20 @@ build DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\Game.cpp.obj: CXX_COMPILER__D
   TARGET_COMPILE_PDB = DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\
   TARGET_PDB = DeadlyCorpGame\DeadlyCorpGame.pdb
 
+build DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\MoonManager.cpp.obj: CXX_COMPILER__DeadlyCorpGame_unscanned_Debug F$:\cpp_projects\DeadlyCorpGame\DeadlyCorpGame\MoonManager.cpp || cmake_object_order_depends_target_DeadlyCorpGame
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
+  OBJECT_DIR = DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir
+  OBJECT_FILE_DIR = DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir
+  TARGET_COMPILE_PDB = DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\
+  TARGET_PDB = DeadlyCorpGame\DeadlyCorpGame.pdb
+
+build DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\ItemManager.cpp.obj: CXX_COMPILER__DeadlyCorpGame_unscanned_Debug F$:\cpp_projects\DeadlyCorpGame\DeadlyCorpGame\ItemManager.cpp || cmake_object_order_depends_target_DeadlyCorpGame
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
+  OBJECT_DIR = DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir
+  OBJECT_FILE_DIR = DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir
+  TARGET_COMPILE_PDB = DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\
+  TARGET_PDB = DeadlyCorpGame\DeadlyCorpGame.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DeadlyCorpGame
@@ -99,7 +113,7 @@ build DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\Game.cpp.obj: CXX_COMPILER__D
 #############################################
 # Link the executable DeadlyCorpGame\DeadlyCorpGame.exe
 
-build DeadlyCorpGame\DeadlyCorpGame.exe: CXX_EXECUTABLE_LINKER__DeadlyCorpGame_Debug DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\DeadlyCorpGame.cpp.obj DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\Game.cpp.obj
+build DeadlyCorpGame\DeadlyCorpGame.exe: CXX_EXECUTABLE_LINKER__DeadlyCorpGame_Debug DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\DeadlyCorpGame.cpp.obj DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\Game.cpp.obj DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\MoonManager.cpp.obj DeadlyCorpGame\CMakeFiles\DeadlyCorpGame.dir\ItemManager.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

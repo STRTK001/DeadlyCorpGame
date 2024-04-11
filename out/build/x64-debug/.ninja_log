@@ -1,3 +1,22 @@
 # ninja log v5
-3	856	7344362377643250	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/DeadlyCorpGame.cpp.obj	fb61fe330d0a7f97
-857	1058	7344362379183257	DeadlyCorpGame/DeadlyCorpGame.exe	65c2f812ff3bb1fd
+3	1738	7345250103660173	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/DeadlyCorpGame.cpp.obj	fb61fe330d0a7f97
+1632	1805	7345222848245354	DeadlyCorpGame/DeadlyCorpGame.exe	8086e9ad39f8cd2d
+14	1706	7345219944531026	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/Game.cpp.obj	6f459cc9af1476dd
+11	1688	7345250103160174	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/MoonManager.cpp.obj	3b9c17dc45d0cdce
+16	1766	7345250103940183	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/ItemManager.cpp.obj	405210e79b911fd6
+16	1752	7345251850766778	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/ItemManager.cpp.obj	405210e79b911fd6
+20	1694	7345251973946996	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/MoonManager.cpp.obj	3b9c17dc45d0cdce
+12	1756	7345251974566983	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/DeadlyCorpGame.cpp.obj	fb61fe330d0a7f97
+16	1791	7345251974926995	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/Game.cpp.obj	6f459cc9af1476dd
+1791	2018	7345251976786984	DeadlyCorpGame/DeadlyCorpGame.exe	8086e9ad39f8cd2d
+11	1670	7345252825286739	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/MoonManager.cpp.obj	3b9c17dc45d0cdce
+2	1685	7345252825436664	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/DeadlyCorpGame.cpp.obj	fb61fe330d0a7f97
+7	1741	7345252825996681	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/Game.cpp.obj	6f459cc9af1476dd
+1742	1904	7345252827306730	DeadlyCorpGame/DeadlyCorpGame.exe	8086e9ad39f8cd2d
+13	1648	7345254157368261	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/Game.cpp.obj	6f459cc9af1476dd
+1649	1811	7345254158658302	DeadlyCorpGame/DeadlyCorpGame.exe	8086e9ad39f8cd2d
+22	1748	7345254808323429	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/MoonManager.cpp.obj	3b9c17dc45d0cdce
+13	1770	7345254808553432	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/DeadlyCorpGame.cpp.obj	fb61fe330d0a7f97
+26	1838	7345254809243361	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/ItemManager.cpp.obj	405210e79b911fd6
+18	1854	7345254809403334	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/Game.cpp.obj	6f459cc9af1476dd
+1854	2065	7345254811103313	DeadlyCorpGame/DeadlyCorpGame.exe	8086e9ad39f8cd2d

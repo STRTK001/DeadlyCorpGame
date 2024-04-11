@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "DeadlyCorpGame.exe (DeadlyCorpGame\\DeadlyCorpGame.exe)",
+      "name": "DeadlyCorpGame.exe (DeadlyCorpGame\\DeadlyCorpGame.exe)"
+    }
+  ]
+}

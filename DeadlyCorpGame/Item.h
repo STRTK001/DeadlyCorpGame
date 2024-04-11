@@ -6,13 +6,15 @@
 struct Item
 {
 	std::string name;
+	/*
 	int price;
 	float
 		scrapValueMultiplier,
 		explorerSurvivalChanceMultiplier,
-		operatorSurvivalChanceMultiplier;
+		operatorSurvivalChanceMultiplier,
 		explorerSaveChance,
 		lootRecoveryMultiplier;
+		*/
 };
 
 #endif
