@@ -3,10 +3,14 @@
 
 #include <string>
 
-struct Item
+class Item
 {
-	std::string name;
-	/*
+public:
+	Item(std::string name) : name_(name) {};
+	std::string name() const { return name_; };
+private:
+	std::string name_;
+
 	int price;
 	float
 		scrapValueMultiplier,
@@ -14,7 +18,7 @@ struct Item
 		operatorSurvivalChanceMultiplier,
 		explorerSaveChance,
 		lootRecoveryMultiplier;
-		*/
+
 };
 
 #endif

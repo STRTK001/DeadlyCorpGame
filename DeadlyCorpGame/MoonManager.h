@@ -13,12 +13,9 @@ class MoonManager
 {
 public:
 	
+	MoonManager() {};
 	bool addMoon(std::shared_ptr<AbstractMoon> moon);
 	std::shared_ptr<AbstractMoon> getMoon(std::string name);
-
-	MoonManager() {};
-	void helloWorld();
-	
 
 private:
 	std::vector<std::shared_ptr<AbstractMoon>> moonVec;

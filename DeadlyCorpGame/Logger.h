@@ -7,9 +7,6 @@
 #include <ctime>
 
 
-
-
-
 /// <summary>
 /// Class for logging msgs to console.
 /// Used for debuging purposes.

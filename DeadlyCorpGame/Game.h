@@ -3,25 +3,28 @@
 
 #include <vector>
 #include <memory>
+#include <format>
 
 #include "MoonManager.h"
 #include "ItemManager.h"
-#include "Employee.h"
 #include "AbstractMoon.h"
-#include "CorporationMoon.h"
-#include "GenericMoon.h"
+#include "SellableMoon.h"
+#include "SendableMoon.h"
+#include "util.h"
+#include "Logger.h"
 
 
 class Game
 {
 	//enum to represent the current Game Phase
 	enum GamePhase { ORBITING, LANDING };
+	enum OptionMode {MAIN,MOONS};
 
 public:
 	Game();
 
 	//initialising new game
-	void newGame();
+	void play();
 	
 	/// <summary>
 	/// Initialises the moons for the game
@@ -33,8 +36,6 @@ public:
 	/// </summary>
 	bool initialiseItems();//create new items
 
-	//manager game cycle - 4 day loops
-	void gameCycle();
 	//read, parse dispatch commands
 
 
@@ -45,7 +46,33 @@ private:
 	ItemManager itemManager;
 	std::weak_ptr<AbstractMoon> currentMoon;
 	GamePhase gamePhase;
-	std::vector<Employee*> aliveEmployees;
+	int employeeCount;
+
+	//brute forcing a delegate into c++
+	//this is a delegate to change the current mode based on the user input
+	std::unique_ptr<void(Game::*)()> currentMode;
+
+	void simulation();
+
+	void displayTitle();
+
+
+	void displayStats();
+
+	void displayOrbitInfo();
+
+	void parseInput(std::string& line, std::vector<std::string>& args);
+
+	void processCommand(std::string& line, std::vector<std::string>& args);
+
+	// --- Mode methods ---
+
+	void orbitMode();
+	void landMode();
+	void sendMode();
+	void sellMode();
+	void moonMode();
+
 };
 
 #endif

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>7</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>287</x>
-      <y>245</y>
-      <w>182</w>
-      <h>168</h>
+      <x>649</x>
+      <y>77</y>
+      <w>286</w>
+      <h>264</h>
     </coordinates>
     <panel_attributes>Game
 --
@@ -28,10 +28,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>476</x>
-      <y>378</y>
-      <w>84</w>
-      <h>63</h>
+      <x>946</x>
+      <y>286</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>ItemManager
 --
@@ -42,10 +42,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>189</x>
-      <y>385</y>
-      <w>84</w>
-      <h>63</h>
+      <x>495</x>
+      <y>297</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>MoonManager
 --
@@ -56,10 +56,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>77</x>
-      <y>462</y>
-      <w>84</w>
-      <h>63</h>
+      <x>374</x>
+      <y>418</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>AbstractMoon
 --
@@ -70,10 +70,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>609</x>
-      <y>273</y>
-      <w>84</w>
-      <h>63</h>
+      <x>1155</x>
+      <y>121</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Player
 --
@@ -84,12 +84,12 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>553</y>
-      <w>84</w>
-      <h>63</h>
+      <x>649</x>
+      <y>605</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
-    <panel_attributes>Employee
+    <panel_attributes>PremiumMoon
 --
 
 --</panel_attributes>
@@ -98,10 +98,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>672</x>
-      <y>525</y>
-      <w>84</w>
-      <h>63</h>
+      <x>1177</x>
+      <y>550</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Store
 --
@@ -112,10 +112,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>672</x>
-      <y>357</y>
-      <w>84</w>
-      <h>63</h>
+      <x>1254</x>
+      <y>253</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Inventory
 --
@@ -126,12 +126,12 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>574</y>
-      <w>84</w>
-      <h>63</h>
+      <x>253</x>
+      <y>605</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
-    <panel_attributes>CorporationMoon
+    <panel_attributes>CorpMoon
 --
 
 --</panel_attributes>
@@ -140,24 +140,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>154</x>
-      <y>574</y>
-      <w>84</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>GenericMoon
---
-
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>672</x>
-      <y>441</y>
-      <w>84</w>
-      <h>63</h>
+      <x>1254</x>
+      <y>385</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Scrap
 --
@@ -168,10 +154,10 @@ displayWelcome()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>483</x>
-      <y>462</y>
-      <w>84</w>
-      <h>63</h>
+      <x>957</x>
+      <y>418</y>
+      <w>132</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Item
 --
@@ -182,10 +168,10 @@ displayWelcome()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>217</x>
-      <y>294</y>
-      <w>84</w>
-      <h>105</h>
+      <x>539</x>
+      <y>154</y>
+      <w>132</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>100.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
@@ -193,34 +179,87 @@ displayWelcome()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>462</x>
-      <y>287</y>
-      <w>70</w>
-      <h>105</h>
+      <x>924</x>
+      <y>143</y>
+      <w>110</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;10.0;80.0;130.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLClass</id>
     <coordinates>
-      <x>35</x>
-      <y>518</y>
-      <w>98</w>
-      <h>70</h>
+      <x>88</x>
+      <y>429</y>
+      <w>187</w>
+      <h>55</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;120.0;50.0;10.0;50.0;10.0;80.0</additional_attributes>
+    <panel_attributes>/&lt;ISendable&gt;/
+--
+send(numExplorers)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>88</x>
+      <y>517</y>
+      <w>132</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>/&lt;ISellable&gt;/
+--
+sell(cargoValue)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>605</y>
+      <w>132</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>GenericMoon
+--
+
+--</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>112</x>
-      <y>546</y>
-      <w>98</w>
-      <h>42</h>
+      <x>308</x>
+      <y>506</y>
+      <w>154</w>
+      <h>121</h>
     </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;10.0;120.0;40.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;50.0;10.0;50.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>429</x>
+      <y>506</y>
+      <w>99</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;70.0;50.0;70.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>539</x>
+      <y>748</y>
+      <w>132</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>/&lt;IBuyable&gt;/
+--
+buy(balance)</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
