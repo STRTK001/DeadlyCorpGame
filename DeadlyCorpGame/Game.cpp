@@ -14,13 +14,19 @@ Game::Game()
 	//we dont start with cargo
 	cargoValue = 0;
 
-	Logger::logDebug("initalising quota!");
+	Logger::logDebug("initalising quotas!");
 	//the first quota starts at 150
-	quota = 150;
+	initalQuota = 150;
+	//set the current quota
+	currentQuota = initalQuota;
 
 	Logger::logDebug("initalising day count!");
-	//
+	//set day count
 	dayCount = 1;
+
+	//set deadline
+	Logger::logDebug("intiallising deadline");
+	deadline = 4;
 
 	Logger::logDebug("initalising items!");
 	//add items
@@ -44,7 +50,11 @@ Game::Game()
 
 	Logger::logDebug("Initalising currentMode delegate");
 		
-	currentMode = std::make_unique<void(Game::*)()>(&Game::orbitMode);
+	currentMode = std::make_unique<void(Game::*)
+		(std::string & line, std::vector<std::string>&args)>(&Game::orbitMode);
+
+	Logger::logDebug("Initalising isPlaying");
+	isPlaying = true;
 
 	Logger::logDebug("Completed game intialisation!");
 }
@@ -128,34 +138,33 @@ void Game::play()
 	displayTitle();
 	//gameplay loop
 	
-	while (true)
+	//init input 
+	std::string line;
+	//and args
+	std::vector<std::string> args;
+
+	do
 	{
 		//if we have a valid delegate
 		if (currentMode)
-			//execute the delegate by deferencing it
-			(this->*(*currentMode))();
+			//execute the delegate by deferencing it and calling its method
+			(this->*(*currentMode))(line,args);
 		else
 			Logger::logError("panic as we have no menu right now!");
-
-		//init input 
-		std::string line;
-		//and args
-		std::vector<std::string> args;
-		//print little arrow thing to console
-		std::cout << "> ";
-		//wait for input
-		std::getline(std::cin,line);
-		//parse input
-		parseInput(line,args);
-		//create new lines
-		std::cout << "\n\n";
-		//process input
-		processCommand(line, args);
-
-		if(line == "quit")
-			break;
-	}
+	}while(isPlaying);
 	
+}
+
+void Game::getInput(std::string& line, std::vector<std::string>& args)
+{
+	//print little arrow thing to console
+	std::cout << "> ";
+	//wait for input
+	std::getline(std::cin, line);
+	//parse input
+	parseInput(line, args);
+	//create new lines
+	std::cout << "\n";
 }
 
 void Game::parseInput(std::string& line, std::vector<std::string>& args)
@@ -176,22 +185,38 @@ void Game::processCommand(std::string& line, std::vector<std::string>& args)
 		if (gamePhase != GamePhase::ORBITING)
 		{
 			//cmd invalid
-			std::cout << "This command is not available at this time.\n";
+			if (!currentMoon.expired())
+				std::cout << std::format("Already landed on {}\n\n", (*currentMoon.lock()).name());
+			else
+				std::cout << "Already landed on NONE\n\n";
 			return;
 		}
 		//set the phase to landing
 		gamePhase = GamePhase::LANDING;
-		//change mode to base menu
-		currentMode = std::make_unique<void(Game::*)()>(&Game::landMode);
+		//change mode to land mode
+		currentMode = std::make_unique<void(Game::*)
+			(std::string & line, std::vector<std::string>&args)>(&Game::landMode);
 		return;
 	}
 	else if (line == "leave")
 	{
-		std::cout << "option 2 is: " << line << std::endl;
+		//check if not in landing phase
+		if (gamePhase != GamePhase::LANDING)
+		{
+			//cmd is invalid
+			std::cout << "This command is not available at this time.\n\n";
+			return;
+		}
+		//set the phase to orbiting
+		gamePhase = GamePhase::ORBITING;
+		//change mode to orbit mode
+		currentMode = std::make_unique<void(Game::*)
+			(std::string & line, std::vector<std::string>&args)>(&Game::orbitMode);
+
 	}
 	else if (line == "exit")
 	{
-		std::cout << "option 3 is: " << line << std::endl;
+		isPlaying = false;
 	}
 	else if (line == "inventory")
 	{
@@ -215,15 +240,70 @@ void Game::processCommand(std::string& line, std::vector<std::string>& args)
 	}
 	else if (line == "send")
 	{
-		std::cout << "option 9 is: " << line << std::endl;
+		//check if we are landed
+		if (gamePhase != GamePhase::LANDING)
+		{
+			std::cout << "This command is not available at this time.\n\n";;
+			return;
+		}
+		//check if the current moon is able to even send
+
+		//send will run the simulation
+
+		std::cout << "---  sending kinda ---\n\n";
 	}
-	else if (line == "sell")
+	else if (line == "sell")//also check if the args are valid for the cmd
 	{
-		std::cout << "option 10 is: " << line << std::endl;
+		//check if we are landed
+		if (gamePhase != GamePhase::LANDING)
+		{
+			std::cout << "This command is not available at this time.\n\n";;
+			return;
+		}
+		//check if the current moon is able to even sell
+
+		std::cout << "--- selling  kinda ---\n\n";
 	}
 	
 }
 
+void Game::checkDeadline()
+{
+	//check if we have approached the deadline
+	if (dayCount < deadline+1)
+	{
+		return;
+	}
+	//check if we have met the quota at the deadline
+	if (currentQuota > 0)
+	{
+		displayGameOver();
+		isPlaying = false;
+		return;
+	}
+	deadline += 4;
+	initalQuota += initalQuota * 0.50;
+	currentQuota = initalQuota;
+	displaySuccess();
+}
+
+void Game::displayGameOver()
+{
+	std::cout
+		<< "-------------------------------------\n"
+		<< ">>>>>>>>>>>>> GAME OVER <<<<<<<<<<<<<\n"
+		<< "-------------------------------------\n\n"
+		<< "You did not meet quota in time, and your employees have been fired.\n"
+		<< std::format("You kept them alive for {} days.\n\n",dayCount-1);
+}
+
+void Game::displaySuccess()
+{
+	std::cout
+		<< "-------------------------------------\n"
+		<< "CONGRATULATIONS ON MAKING QUOTA!\n"
+		<< std::format("New quota : ${}\n", currentQuota);
+}
 
 void Game::simulation()
 {
@@ -246,7 +326,6 @@ void Game::displayTitle()
 }
 
 
-
 void Game::displayOrbitInfo()
 {
 	//check if we have a current moon or not
@@ -257,7 +336,7 @@ void Game::displayOrbitInfo()
 }
 
 
-void Game::orbitMode()
+void Game::orbitMode(std::string& line, std::vector<std::string>& args)
 {
 	//display day header
 	std::cout
@@ -266,7 +345,8 @@ void Game::orbitMode()
 	std::cout
 		<< std::format("Current cargo value: ${}\n", cargoValue)
 		<< std::format("Current balance: ${}\n", balance)
-		<< std::format("Current quota: ${} ({} days left to meet quota)\n", quota,4-dayCount);
+		<< std::format("Current quota: ${} ({} days left to meet quota)\n", 
+			currentQuota,deadline-dayCount);
 	//display orbit info
 	displayOrbitInfo();
 	//display options
@@ -274,9 +354,22 @@ void Game::orbitMode()
 		<< ">MOONS\nTo see the list of moons the autopilot can route to.\n\n"
 		<< ">STORE\nTo see the company store's selection of useful items.\n\n"
 		<< ">INVENTORY\nTo see the list of items you've already bought.\n\n";
+
+	//warn player that the deadline is today
+	if (dayCount == deadline)
+		std::cout 
+			<< "NOTE: 0 days left to meet quota. Type \"route corporation\""
+			<< " to go to the corp's moon and sell the scrap you collected for cash.\n\n";
+
+	//
+	do
+	{
+		getInput(line, args);
+		processCommand(line, args);
+	} while (gamePhase == GamePhase::ORBITING);
 }
 
-void Game::landMode()
+void Game::landMode(std::string& line, std::vector<std::string>& args)
 {
 	//display welcome notice
 	if (!currentMoon.expired())
@@ -287,7 +380,8 @@ void Game::landMode()
 	std::cout
 		<< std::format("Current cargo value: ${}\n", cargoValue)
 		<< std::format("Current balance: ${}\n", balance)
-		<< std::format("Current quota: ${} ({} days left to meet quota)\n", quota, 4 - dayCount);
+		<< std::format("Current quota: ${} ({} days left to meet quota)\n", 
+			currentQuota, deadline - dayCount);
 	
 	//reset the number of employees
 	employeeCount = 4;
@@ -301,6 +395,16 @@ void Game::landMode()
 	//probably shouldnt go here but get moon behaviour notes (SEND/SELL)
 	//display the behaviour notes
 	std::cout << "--- stuff about sending/selling goes here ---\n\n";
+
+	do
+	{
+		getInput(line, args);
+		processCommand(line, args);
+	} while (gamePhase == GamePhase::LANDING);
+	
+	//increment day
+	dayCount++;
+	checkDeadline();
 }
 
 

@@ -18,7 +18,6 @@ class Game
 {
 	//enum to represent the current Game Phase
 	enum GamePhase { ORBITING, LANDING };
-	enum OptionMode {MAIN,MOONS};
 
 public:
 	Game();
@@ -40,26 +39,35 @@ public:
 
 
 private:
-	int balance, cargoValue, quota;
-	int dayCount;
+	int balance, cargoValue, initalQuota, currentQuota;
+	int dayCount, deadline;
 	MoonManager moonManager;
 	ItemManager itemManager;
 	std::weak_ptr<AbstractMoon> currentMoon;
 	GamePhase gamePhase;
 	int employeeCount;
 
+	bool isPlaying;
+
 	//brute forcing a delegate into c++
 	//this is a delegate to change the current mode based on the user input
-	std::unique_ptr<void(Game::*)()> currentMode;
+	std::unique_ptr<void(Game::*)(std::string& line,std::vector<std::string>& args)> currentMode;
 
 	void simulation();
 
+	void checkDeadline();
+
 	void displayTitle();
 
+	void displayGameOver();
+	
+	void displaySuccess();
 
 	void displayStats();
 
 	void displayOrbitInfo();
+
+	void getInput(std::string& line, std::vector<std::string>& args);
 
 	void parseInput(std::string& line, std::vector<std::string>& args);
 
@@ -67,11 +75,8 @@ private:
 
 	// --- Mode methods ---
 
-	void orbitMode();
-	void landMode();
-	void sendMode();
-	void sellMode();
-	void moonMode();
+	void orbitMode(std::string& line, std::vector<std::string>& args);
+	void landMode(std::string& line, std::vector<std::string>& args); //can send or sell	
 
 };
 
