@@ -36,3 +36,21 @@ bool PremiumMoon::onNavigate(Game& game)
 	std::cout << "Trip cancelled.\n";
 	return false;
 }
+
+void PremiumMoon::sell(Game& game, int amount)
+{
+	std::cout << "This command is not available on this moon.\n\n";
+}
+
+void PremiumMoon::send(Game& game, int count)
+{
+	std::cout << std::format("you wouldve sent {} employees out\n\n", count);
+};
+
+void PremiumMoon::print()
+{
+	std::cout
+		<< "Type SEND followed by the number of employees you wish to send "
+		<< "inside the facility. All the other employees will stay on the ship. "
+		<< "Type LEAVE to leave the planet.\n\n";
+}

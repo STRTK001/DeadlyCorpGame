@@ -31,8 +31,8 @@ void MoonManager::moons() const
 {
 	//display welcome msg
 	std::cout
-		<< "Welcom to the exomoons catalogue.\n"
-		<< "To route the autopilot to a moob, use the word ROUTE.\n"
+		<< "Welcome to the exomoons catalogue.\n"
+		<< "To route the autopilot to a moon, use the word ROUTE.\n"
 		<< "---------------------------------------\n\n";
 	//for each moon in our moon vec
 	for (std::shared_ptr<AbstractMoon> moon : moonVec)
@@ -45,6 +45,8 @@ void MoonManager::moons() const
 		else
 			std::cout << std::endl;
 	}
+	//line break
+	std::cout << std::endl;
 }
 
 void MoonManager::route(Game& game, std::string moonName)
@@ -55,7 +57,7 @@ void MoonManager::route(Game& game, std::string moonName)
 	if (targetMoon == nullptr)
 	{
 		//print error msg
-		std::cout << std::format("Unknown moon \"{}\"\n\n", moonName);
+		std::cout << std::format("Unknown moon \"{}\".\n\n", moonName);
 		//*** print weather as well once we've worked that out
 		return;
 	}

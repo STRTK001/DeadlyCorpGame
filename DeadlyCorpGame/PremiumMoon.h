@@ -2,7 +2,6 @@
 #define IPREMIUMMOON_H
 
 #include <string>
-#include <iostream>
 #include <format>
 
 #include "AbstractMoon.h"
@@ -18,9 +17,11 @@ public:
 	
 	bool onNavigate(Game& game) override;
 
-	virtual void sellCargo(Game& g, int amount) override {};
+	virtual void sell(Game& game, int amount) override;
 
-	virtual void sendEmployees(Game& g, int count) override {};
+	virtual void send(Game& game, int count) override;
+
+	virtual void print() override;
 };
 
 #endif

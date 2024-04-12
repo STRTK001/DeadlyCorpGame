@@ -42,11 +42,17 @@ public:
 
 	int& getBalance();
 
+	int& getCurrentQuotaEffort();
+	
+	int& getCargoValue();
+
+	const int& getInitialQuota();
+
 	//read, parse dispatch commands
 
 
 private:
-	int balance, cargoValue, initalQuota, currentQuota;
+	int balance, cargoValue, initialQuota, currentQuotaEffort;
 	int dayCount, deadline;
 	MoonManager moonManager;
 	ItemManager itemManager;

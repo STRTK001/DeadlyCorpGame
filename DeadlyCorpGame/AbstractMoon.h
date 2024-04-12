@@ -9,11 +9,6 @@ class AbstractMoon
 {
 
 public:
-	// --- vars
-	
-
-	// --- methods
-
 	AbstractMoon(std::string name,int price) : 
 		name_(name), price_(price) {};
 
@@ -21,13 +16,15 @@ public:
 
 	const int& price() const { return price_; };
 
-	virtual void onDayBegin(Game& g) {};
+	virtual void onDayBegin(Game& game) {};
 
-	virtual void sellCargo(Game& g, int amount) = 0;
+	virtual void sell(Game& game, int amount) = 0;
 
-	virtual void sendEmployees(Game& g, int count) = 0;
+	virtual void send(Game& game, int count) = 0;
 
 	virtual bool onNavigate(Game& game) { return true; };
+
+	virtual void print() = 0;;
 
 
 protected:
