@@ -10,6 +10,7 @@
 #include "AbstractMoon.h"
 #include "SellableMoon.h"
 #include "SendableMoon.h"
+#include "PremiumMoon.h"
 #include "util.h"
 #include "Logger.h"
 
@@ -34,6 +35,12 @@ public:
 	/// Initialises the items for the game
 	/// </summary>
 	bool initialiseItems();//create new items
+
+	std::shared_ptr<AbstractMoon> getCurrentMoon();
+
+	void setCurrentMoon(std::shared_ptr<AbstractMoon>& targetMoon);
+
+	int& getBalance();
 
 	//read, parse dispatch commands
 

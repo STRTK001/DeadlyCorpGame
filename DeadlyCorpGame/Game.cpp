@@ -38,7 +38,7 @@ Game::Game()
 
 	Logger::logDebug("initalising current moon!");
 	//set current moon to corp
-	currentMoon = moonManager.getMoon("Corporation");
+	currentMoon = moonManager.getMoon("corporation");
 	if (!currentMoon.expired())
 		Logger::logDebug((*currentMoon.lock()).name());
 	else
@@ -62,32 +62,50 @@ Game::Game()
 
 bool Game::initialiseMoons()
 {
+	// -- add normal moons
 	//create corporation moon
 	Logger::logDebug("__creating corporation moon__");
-	std::shared_ptr<AbstractMoon> corporation = std::make_shared<SellableMoon>(SellableMoon("Corporation"));
+	std::shared_ptr<AbstractMoon> corporation = std::make_shared<SellableMoon>(SellableMoon("Corporation", 0));
 	if (!moonManager.addMoon(corporation))
 		return false;
 	//create prototyping moon
 	Logger::logDebug("__creating prototyping moon__");
-	std::shared_ptr<AbstractMoon> prototyping = std::make_shared<SendableMoon>(SendableMoon("Prototyping"));
+	std::shared_ptr<AbstractMoon> prototyping = std::make_shared<SendableMoon>(SendableMoon("Prototyping", 0));
 	if (!moonManager.addMoon(prototyping))
 		return false;
 	//create insurance moon
 	Logger::logDebug("__creating insurance moon__");
-	std::shared_ptr<AbstractMoon> insurance = std::make_shared<SendableMoon>(SendableMoon("Insurance"));
+	std::shared_ptr<AbstractMoon> insurance = std::make_shared<SendableMoon>(SendableMoon("Insurance", 0));
 	if (!moonManager.addMoon(insurance))
 		return false;
 	//create pledge moon
 	Logger::logDebug("__creating pledge moon__");
-	std::shared_ptr<AbstractMoon> pledge = std::make_shared<SendableMoon>(SendableMoon("Pledge"));
+	std::shared_ptr<AbstractMoon> pledge = std::make_shared<SendableMoon>(SendableMoon("Pledge", 0));
 	if (!moonManager.addMoon(pledge))
 		return false;
 	//create defence moon
 	Logger::logDebug("__creating defence moon__");
-	std::shared_ptr<AbstractMoon> defence = std::make_shared<SendableMoon>(SendableMoon("Defence"));
+	std::shared_ptr<AbstractMoon> defence = std::make_shared<SendableMoon>(SendableMoon("Defence", 0));
 	if (!moonManager.addMoon(defence))
 		return false;
-	
+
+	//--- add premium moons
+	//create april moon
+	Logger::logDebug("__creating april moon__");
+	std::shared_ptr<AbstractMoon> april = std::make_shared<PremiumMoon>(PremiumMoon("April", 550));
+	if (!moonManager.addMoon(april))
+		return false;
+	//create tore moon
+	Logger::logDebug("__creating tore moon__");
+	std::shared_ptr<AbstractMoon> tore = std::make_shared<PremiumMoon>(PremiumMoon("Tore", 700));
+	if (!moonManager.addMoon(tore))
+		return false;
+	//create hyperion moon
+	Logger::logDebug("__creating hyperion moon__");
+	std::shared_ptr<AbstractMoon> hyperion = std::make_shared<PremiumMoon>(PremiumMoon("Hyperion", 900));
+	if (!moonManager.addMoon(hyperion))
+		return false;
+
 	return true;
 }
 
@@ -179,7 +197,8 @@ void Game::processCommand(std::string& line, std::vector<std::string>& args)
 {
 	//c++ doesnt have decent switch statements
 	//this conditional chain acts like one for the value of `line`
-	if (line == "land")
+
+	if (line == "land")// ***************** also check if the args are valid for each cmd
 	{
 		//if not in orbit phase
 		if (gamePhase != GamePhase::ORBITING)
@@ -220,23 +239,28 @@ void Game::processCommand(std::string& line, std::vector<std::string>& args)
 	}
 	else if (line == "inventory")
 	{
+		//call inventory method in the item manager
 		std::cout << "option 4 is: " << line << std::endl;
 	}
 	else if (line == "store")
 	{
+		//call store method in the item manager
 		std::cout << "option 5 is: " << line << std::endl;
 	}
 	else if (line == "buy")
 	{
+		//call purchase method in item manager
 		std::cout << "option 6 is: " << line << std::endl;
 	}
 	else if (line == "route")
 	{
-		std::cout << "option 7 is: " << line << std::endl;
+		//call route method in moon manager
+		moonManager.route(*this,args[0]);
 	}
 	else if (line == "moons")
 	{
-		std::cout << "option 8 is: " << line << std::endl;
+		//call moons method in moon manager
+		moonManager.moons();
 	}
 	else if (line == "send")
 	{
@@ -246,13 +270,13 @@ void Game::processCommand(std::string& line, std::vector<std::string>& args)
 			std::cout << "This command is not available at this time.\n\n";;
 			return;
 		}
-		//check if the current moon is able to even send
+		//call the send method of the current moon
 
 		//send will run the simulation
 
 		std::cout << "---  sending kinda ---\n\n";
 	}
-	else if (line == "sell")//also check if the args are valid for the cmd
+	else if (line == "sell")
 	{
 		//check if we are landed
 		if (gamePhase != GamePhase::LANDING)
@@ -260,9 +284,15 @@ void Game::processCommand(std::string& line, std::vector<std::string>& args)
 			std::cout << "This command is not available at this time.\n\n";;
 			return;
 		}
-		//check if the current moon is able to even sell
+		//call the send method of the current moon
+
+		//this will enable the user to sell cargo.
 
 		std::cout << "--- selling  kinda ---\n\n";
+	}
+	else
+	{
+		std::cout << "Unknown command.\n\n";
 	}
 	
 }
@@ -335,6 +365,15 @@ void Game::displayOrbitInfo()
 		std::cout << "Currently orbiting: NONE!!\n\n";
 }
 
+void Game::displayStats()
+{
+	std::cout
+		<< std::format("Current cargo value: ${}\n", cargoValue)
+		<< std::format("Current balance: ${}\n", balance)
+		<< std::format("Current quota: ${} ({} days left to meet quota)\n",
+			currentQuota, deadline - dayCount);
+}
+
 
 void Game::orbitMode(std::string& line, std::vector<std::string>& args)
 {
@@ -342,11 +381,7 @@ void Game::orbitMode(std::string& line, std::vector<std::string>& args)
 	std::cout
 		<< std::format("============= DAY {} =============\n", dayCount);
 	//display stats
-	std::cout
-		<< std::format("Current cargo value: ${}\n", cargoValue)
-		<< std::format("Current balance: ${}\n", balance)
-		<< std::format("Current quota: ${} ({} days left to meet quota)\n", 
-			currentQuota,deadline-dayCount);
+	displayStats();
 	//display orbit info
 	displayOrbitInfo();
 	//display options
@@ -361,7 +396,7 @@ void Game::orbitMode(std::string& line, std::vector<std::string>& args)
 			<< "NOTE: 0 days left to meet quota. Type \"route corporation\""
 			<< " to go to the corp's moon and sell the scrap you collected for cash.\n\n";
 
-	//
+	//get user input
 	do
 	{
 		getInput(line, args);
@@ -377,12 +412,7 @@ void Game::landMode(std::string& line, std::vector<std::string>& args)
 	else
 		std::cout << "WELCOME to NONE!!\n\n";
 	//display stats
-	std::cout
-		<< std::format("Current cargo value: ${}\n", cargoValue)
-		<< std::format("Current balance: ${}\n", balance)
-		<< std::format("Current quota: ${} ({} days left to meet quota)\n", 
-			currentQuota, deadline - dayCount);
-	
+	displayStats();
 	//reset the number of employees
 	employeeCount = 4;
 	//display number of employees
@@ -396,16 +426,31 @@ void Game::landMode(std::string& line, std::vector<std::string>& args)
 	//display the behaviour notes
 	std::cout << "--- stuff about sending/selling goes here ---\n\n";
 
+	//get user input
 	do
 	{
 		getInput(line, args);
 		processCommand(line, args);
 	} while (gamePhase == GamePhase::LANDING);
 	
-	//increment day
+	//increment day as we are leaving
 	dayCount++;
 	checkDeadline();
 }
 
+int& Game::getBalance()
+{
+	return balance;
+}
+
+void Game::setCurrentMoon(std::shared_ptr<AbstractMoon>& targetMoon)
+{
+	currentMoon = targetMoon;
+}
+
+std::shared_ptr<AbstractMoon> Game::getCurrentMoon()
+{
+	return currentMoon.lock();
+}
 
 

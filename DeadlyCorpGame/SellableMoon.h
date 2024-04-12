@@ -9,7 +9,7 @@ class SellableMoon : public AbstractMoon
 {
 
 public:
-	SellableMoon(std::string name) : AbstractMoon(name) {};
+	SellableMoon(std::string name,int price) : AbstractMoon(name,price) {};
 
 	virtual void sellCargo(Game& g, int amount) override {};
 
