@@ -1,9 +1,9 @@
 # ninja log v5
 13	2208	7347101953741731	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/DeadlyCorpGame.cpp.obj	fb61fe330d0a7f97
-2606	2832	7347101959591654	DeadlyCorpGame/DeadlyCorpGame.exe	646e029d69e6ef09
+2589	2811	7347145115421777	DeadlyCorpGame/DeadlyCorpGame.exe	646e029d69e6ef09
 20	793	7347071327271971	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/util.cpp.obj	899c3b7eb54e1cd0
 35	2495	7347101956531697	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/SellableMoon.cpp.obj	7006d33052138738
-18	2564	7347101957311689	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/Game.cpp.obj	6f459cc9af1476dd
+4	2589	7347145113751759	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/Game.cpp.obj	6f459cc9af1476dd
 31	2502	7347101956421686	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/PremiumMoon.cpp.obj	c293f36faedcb25a
 22	2576	7347101957441666	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/MoonManager.cpp.obj	3b9c17dc45d0cdce
 26	2606	7347101957731655	DeadlyCorpGame/CMakeFiles/DeadlyCorpGame.dir/ItemManager.cpp.obj	405210e79b911fd6

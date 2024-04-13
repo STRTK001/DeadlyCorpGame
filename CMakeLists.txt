@@ -13,3 +13,5 @@ project ("DeadlyCorpGame")
 
 # Include sub-projects.
 add_subdirectory ("DeadlyCorpGame")
+
+add_executable(DeadlyCorp DeadlyCorpGame/DeadlyCorpGame.cpp)

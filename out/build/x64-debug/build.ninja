@@ -40,6 +40,42 @@ include CMakeFiles\rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = F$:\cpp_projects\DeadlyCorpGame\out\build\x64-debug\
+# =============================================================================
+# Object build statements for EXECUTABLE target DeadlyCorp
+
+
+#############################################
+# Order-only phony target for DeadlyCorp
+
+build cmake_object_order_depends_target_DeadlyCorp: phony || CMakeFiles\DeadlyCorp.dir
+
+build CMakeFiles\DeadlyCorp.dir\DeadlyCorpGame\DeadlyCorpGame.cpp.obj: CXX_COMPILER__DeadlyCorp_unscanned_Debug F$:\cpp_projects\DeadlyCorpGame\DeadlyCorpGame\DeadlyCorpGame.cpp || cmake_object_order_depends_target_DeadlyCorp
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
+  OBJECT_DIR = CMakeFiles\DeadlyCorp.dir
+  OBJECT_FILE_DIR = CMakeFiles\DeadlyCorp.dir\DeadlyCorpGame
+  TARGET_COMPILE_PDB = CMakeFiles\DeadlyCorp.dir\
+  TARGET_PDB = DeadlyCorp.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target DeadlyCorp
+
+
+#############################################
+# Link the executable DeadlyCorp.exe
+
+build DeadlyCorp.exe: CXX_EXECUTABLE_LINKER__DeadlyCorp_Debug CMakeFiles\DeadlyCorp.dir\DeadlyCorpGame\DeadlyCorpGame.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\DeadlyCorp.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\DeadlyCorp.dir\
+  TARGET_FILE = DeadlyCorp.exe
+  TARGET_IMPLIB = DeadlyCorp.lib
+  TARGET_PDB = DeadlyCorp.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -186,6 +222,8 @@ build DeadlyCorpGame\rebuild_cache: phony DeadlyCorpGame\CMakeFiles\rebuild_cach
 # =============================================================================
 # Target aliases.
 
+build DeadlyCorp: phony DeadlyCorp.exe
+
 build DeadlyCorpGame: phony DeadlyCorpGame\DeadlyCorpGame.exe
 
 build DeadlyCorpGame.exe: phony DeadlyCorpGame\DeadlyCorpGame.exe
@@ -198,7 +236,7 @@ build DeadlyCorpGame.exe: phony DeadlyCorpGame\DeadlyCorpGame.exe
 #############################################
 # Folder: F:/cpp_projects/DeadlyCorpGame/out/build/x64-debug
 
-build all: phony DeadlyCorpGame\all
+build all: phony DeadlyCorp.exe DeadlyCorpGame\all
 
 # =============================================================================
 

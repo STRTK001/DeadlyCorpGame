@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "DeadlyCorpGame",
+					"jsonFile" : "directory-DeadlyCorpGame-Debug-e8fadbf2ff5257df4b49.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "DeadlyCorpGame",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "DeadlyCorpGame",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DeadlyCorp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DeadlyCorp-Debug-8bacdb95889e99c6d7cc.json",
+					"name" : "DeadlyCorp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "DeadlyCorpGame::@25a1777ae3adced78d51",
+					"jsonFile" : "target-DeadlyCorpGame-Debug-b369e9cfb7ac50c2007d.json",
+					"name" : "DeadlyCorpGame",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/cpp_projects/DeadlyCorpGame/out/build/x64-debug",
+		"source" : "F:/cpp_projects/DeadlyCorpGame"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
