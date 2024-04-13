@@ -1,0 +1,18 @@
+///
+/// Author: Travis Strawbridge
+/// Email: strtk001@mymail.unisa.edu.au
+/// student id: 110340713
+///
+
+Brief design discussion:
+	
+	initially I planned on having structs for items & weather & classes for store and inventory but went
+	back on the idea due to having not fully understood the project constraints. 
+	I also wanted to make interfaces for ISellable, ISendable and IPremium but also went back on the idea as
+	I had come to find that in the design contraints Game had to create the Abstract moons so I couldnt use a
+	factory to create an Abstract moon that would inherit the interfaces. So if  were to use those interfaces in
+	the Game class I would have to edit the several methods for each time i add a new interface for invoking various
+	behaviors.
+	My initial goal was to make the system as agnostic as possible when it came to moons and items but this didnt
+	turn out to be realistic and cost me more time to fix then actually code. So my design ended up being made up as I
+	went along troubleshooting and finding solutions.

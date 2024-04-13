@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>258</y>
+      <w>240</w>
+      <h>402</h>
+    </coordinates>
+    <panel_attributes>Game
+--
+- _moonManager: MoonManager
+- _itemManager: ItemManager
+- _balance: int
+- _cargoValue: int
+- _initialQuota: int
+- _currentQuotaEffort: int
+- _dayCount: int
+- _deadline: int
+- _aliveEmployees: int
+- _currentMoon: AbstractMoon*
+- _gamePhase: enum
+- _isPlaying: bool
+- _currentMode: Game::*(string,vector&lt;string&gt;[*])
+- _randomGenerator: mt19937
+--
++ Game()
++ play()
++ initialiseMoons(): bool
++ initialiseItems(): bool
++ calculateSimulationParameters()
++ setCurrentMoon(AbstractMoon*)
++ getCurrentCurrentMoon(): AbstractMoon*
++ getBalance(): int
++ getCurrentQuotaEffort(): int
++ getCargoValue(): int
++ getAliveEmployees(): int
++ getInitalQuota(): int
++ getRandomGenerator(): mt19937
+- checkDeadline()
+- displayTitle()
+- displayGameOver()
+- displaySuccess()
+- displayStats()
+- displayOrbitInfo()
+- getInput(string,vector&lt;string&gt;[*])
+- parseInput(string,vector&lt;string&gt;[*])
+- processCommand(string,vector&lt;string&gt;[*])
+- orbitMode(string,vector&lt;string&gt;[*])
+- landMode(string,vector&lt;string&gt;[*])
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>402</x>
+      <y>120</y>
+      <w>132</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Logger
+--
+- &lt;isActive&gt;: bool
+--
++ &lt;setActive(bool)&gt;: bool
++ &lt;logError(string)&gt;
++ &lt;logWarning(string)&gt;
++ &lt;logDebug(string)&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>114</x>
+      <y>576</y>
+      <w>162</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>MoonManager
+--
+- _moonVec: vector&lt;AbstractMoon&gt;[*]
+--
++ MoonManager()
++ addMoon(AbstractMoon*): bool
++ getMoon(string): AbstractMoon*
++ moons()
++ route(Game, string)
++ onDayBegin(Game)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>192</x>
+      <y>456</y>
+      <w>162</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+1 .. 1
+is held by &gt;
+</panel_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>558</y>
+      <w>240</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>ItemManager
+--
+- _storeItems: vector&lt;item*&gt;[*]
+- _boughtItems: vector&lt;item*&gt;[0..*]
+--
++ ItemManager
++ addItem(Item*): bool
++ getItem(string): Item*
++ store()
++ inventory()
++ route(Game, string)
++ calculateSimulationParameters(float,float,float,float,float)
+- hasBought(string)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>456</y>
+      <w>144</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+1 .. 1
+&lt; is held by </panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0;220.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>636</x>
+      <y>768</y>
+      <w>240</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+- _name: string
+- _price: int
+- _scrapValueMultiplier: float
+- _explorerSurvivalChanceMultiplier: float
+- _operatorSurvivalChanceMultiplier: float
+- _explorerSaveChance: float
+- _lootRecoveryMultiplier: float
+--
++ Item(string,int,float,float,float,float,float)
++ name(): string
++ price(): int
++ calculateSimulationParameters(float,float,float,float,float)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>654</y>
+      <w>132</w>
+      <h>222</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+1 .. *
+creates &gt;</panel_attributes>
+    <additional_attributes>200.0;350.0;10.0;350.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>690</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>654</y>
+      <w>198</w>
+      <h>222</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+1 .. *
+&lt; creates </panel_attributes>
+    <additional_attributes>10.0;350.0;250.0;350.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>768</y>
+      <w>162</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>/AbstractMoon/
+--
+- _name: string
+- _price: int
+- _baseSurvivalChance: float
+- _minimumScrapValue: float
+- _maximumScrapValue: float
+--
++ AbstractMoon(string, float, float, float)
++ name(): string
++ price(): int
++ weather(): enum
++ onDayBegin(Game)
++ sell(Game,int)
++ send(Game, int)
++ onNavigate(Game): bool
++ displayWeather()
++ print()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>186</x>
+      <y>666</y>
+      <w>84</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+* .. 1
+is managed by ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>1008</y>
+      <w>84</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>SellableMoon
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>1008</y>
+      <w>84</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>SendableMoon
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>1008</y>
+      <w>84</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>PremiumMoon
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>192</x>
+      <y>930</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>972</y>
+      <w>234</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>370.0;60.0;370.0;10.0;10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>186</y>
+      <w>276</w>
+      <h>402</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1 .. 1
+call ^</panel_attributes>
+    <additional_attributes>440.0;10.0;10.0;10.0;10.0;650.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>162</y>
+      <w>324</w>
+      <h>684</h>
+    </coordinates>
+    <panel_attributes>lt=-
+* .. 1
+call ^</panel_attributes>
+    <additional_attributes>520.0;10.0;10.0;10.0;10.0;1120.0;50.0;1120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>186</y>
+      <w>252</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1 .. 1
+call ^</panel_attributes>
+    <additional_attributes>10.0;10.0;360.0;10.0;360.0;620.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>156</y>
+      <w>402</w>
+      <h>732</h>
+    </coordinates>
+    <panel_attributes>lt=-
+* .. 1
+call ^</panel_attributes>
+    <additional_attributes>10.0;10.0;610.0;10.0;610.0;1200.0;580.0;1200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>210</y>
+      <w>42</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1 .. 1
+call ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>654</y>
+      <w>150</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+* .. 1
+is pointed by ^</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;270.0;10.0;270.0</additional_attributes>
+  </element>
+</diagram>
