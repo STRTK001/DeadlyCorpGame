@@ -1,25 +1,37 @@
 #include "ItemManager.h"
 #include "Game.h"
 
+///
+/// Author: Travis Strawbridge
+/// Email: strtk001@mymail.unisa.edu.au
+/// student id: 110340713
+///
+
 bool ItemManager::addItem(std::shared_ptr<Item> item)
 {
-	storeItems.push_back(item);
+	_storeItems.push_back(item);
 	return true;
 }
 
 std::shared_ptr<Item> ItemManager::getItem(std::string itemName)
 {
-	for (std::shared_ptr<Item> item : storeItems)
+	//for each item
+	for (std::shared_ptr<Item> item : _storeItems)
 	{
 		Logger::logDebug(item.get()->name());
+		//check if the item exists
 		if (item.get() != nullptr)
 		{
 			//get target item name
 			std::string targetName = item.get()->name();
 			//lower target name
 			util::lower(targetName);
-			if(targetName == itemName)
+			//if we found our target
+			if (targetName == itemName)
+			{
 				return item;
+			}
+				
 		}
 			
 	}
@@ -47,7 +59,7 @@ void ItemManager::buy(Game& game, std::string itemName)
 		return;
 	}
 	//add item to bought items
-	boughtItems.push_back(targetItem);
+	_boughtItems.push_back(targetItem);
 	//make transaction
 	game.getBalance() -= targetItem.get()->price();
 	//print sucess msg
@@ -58,14 +70,17 @@ void ItemManager::buy(Game& game, std::string itemName)
 
 bool ItemManager::hasBought(std::string itemName)
 {
-	for (std::shared_ptr<Item> item : boughtItems)
+	for (std::shared_ptr<Item> item : _boughtItems)
 	{
 		//get target item name
 		std::string targetName = item.get()->name();
 		//lower target name
 		util::lower(targetName);
+		//if we found our target
 		if (targetName == itemName)
+		{
 			return true;
+		}
 	}
 	return false;
 }
@@ -78,7 +93,7 @@ void ItemManager::store()
 		<< "Use the word BUY on any item.\n"
 		<< "---------------------------------------\n\n";
 	//for each moon in our moon vec
-	for (std::shared_ptr<Item> item : storeItems)
+	for (std::shared_ptr<Item> item : _storeItems)
 	{
 		//print the moon name and price
 		std::cout << std::format("* {} // Price: ${}\n", 
@@ -95,7 +110,7 @@ void ItemManager::inventory()
 		<< "The following items are available.\n"
 		<< "---------------------------------------\n\n";
 	//check if we have bought items
-	if (boughtItems.size() == 0)
+	if (_boughtItems.size() == 0)
 	{
 		//print empty
 		std::cout << "(empty)\n\n";
@@ -103,11 +118,30 @@ void ItemManager::inventory()
 	}
 
 	//for each moon in our moon vec
-	for (std::shared_ptr<Item> item : boughtItems)
+	for (std::shared_ptr<Item> item : _boughtItems)
 	{
 		//print the moon name and price
 		std::cout << std::format("* {}\n", item.get()->name());
 	}
 	//line break
 	std::cout << std::endl;
+}
+void ItemManager::calculateSimulationParameters
+(
+	float& scrapValueMutli, float& explorerSurvivalChanceMulti,
+	float& operatorSurvivalChanceMulti, float& explorerSaveChance,
+	float& lootRecoveryMulti
+)
+{
+	//for each item that we have bought
+	for (auto item : _boughtItems)
+	{
+		//calculate the sim parameters of this item
+		item.get()->calculateSimulationParameters
+		(
+			scrapValueMutli, explorerSurvivalChanceMulti,
+			operatorSurvivalChanceMulti, explorerSaveChance,
+			lootRecoveryMulti
+		);
+	}
 }

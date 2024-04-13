@@ -1,6 +1,12 @@
 #include "SellableMoon.h"
 #include "Game.h"
 
+///
+/// Author: Travis Strawbridge
+/// Email: strtk001@mymail.unisa.edu.au
+/// student id: 110340713
+///
+
 void SellableMoon::sell(Game& game, int amount) 
 {
 	if (amount == -1)
@@ -57,4 +63,10 @@ void SellableMoon::print()
 		<< "balance and achieve quota.\nSpecify the amount to sell after "
 		<< "the SELL word to only sell a portion of your cargo.\n"
 		<< "Type LEAVE to leave the planet.\n\n";
+}
+
+void SellableMoon::onDayBegin(Game& game)
+{
+	//set weather to clear
+	_weather = MoonWeather::CLEAR;
 }

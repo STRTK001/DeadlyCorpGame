@@ -1,6 +1,12 @@
 ﻿// DeadlyCorpGame.cpp : Defines the entry point for the application.
 //
 
+///
+/// Author: Travis Strawbridge
+/// Email: strtk001@mymail.unisa.edu.au
+/// student id: 110340713
+///
+
 #include "DeadlyCorpGame.h"
 
 using namespace std;

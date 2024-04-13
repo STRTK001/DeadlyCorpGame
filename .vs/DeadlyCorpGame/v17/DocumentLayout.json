@@ -7,72 +7,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\MoonManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\MoonManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\SellableMoon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\AbstractMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\AbstractMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\PremiumMoon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\PremiumMoon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\SendableMoon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\SendableMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\PremiumMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\PremiumMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\SellableMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\MoonManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\MoonManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\util.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\util.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\ItemManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\ItemManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\ItemManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\ItemManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\DeadlyCorpGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\DeadlyCorpGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DeadlyCorpGame\\SendableMoon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -81,132 +21,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 177,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Game.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Game.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\Game.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Game.h",
-              "RelativeToolTip": "DeadlyCorpGame\\Game.h",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAADAAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-08T13:29:16.442Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MoonManager.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\MoonManager.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\MoonManager.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\MoonManager.h",
-              "RelativeToolTip": "DeadlyCorpGame\\MoonManager.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-11T06:35:29.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ItemManager.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\ItemManager.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\ItemManager.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\ItemManager.h",
-              "RelativeToolTip": "DeadlyCorpGame\\ItemManager.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-11T06:35:36.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "util.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\util.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\util.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\util.h",
-              "RelativeToolTip": "DeadlyCorpGame\\util.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-11T09:23:37.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "util.cpp",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\util.cpp",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\util.cpp",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\util.cpp",
-              "RelativeToolTip": "DeadlyCorpGame\\util.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-11T09:23:08.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AbstractMoon.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\AbstractMoon.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\AbstractMoon.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\AbstractMoon.h",
-              "RelativeToolTip": "DeadlyCorpGame\\AbstractMoon.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-12T16:51:38.111Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SendableMoon.cpp",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.cpp",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\SendableMoon.cpp",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.cpp",
-              "RelativeToolTip": "DeadlyCorpGame\\SendableMoon.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-12T16:48:58.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SellableMoon.cpp",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.cpp",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\SellableMoon.cpp",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.cpp",
-              "RelativeToolTip": "DeadlyCorpGame\\SellableMoon.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-12T16:48:03.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Item.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Item.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\Item.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Item.h",
-              "RelativeToolTip": "DeadlyCorpGame\\Item.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-12T15:50:16.813Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -215,112 +32,36 @@
               "RelativeDocumentMoniker": "DeadlyCorpGame\\Game.cpp",
               "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Game.cpp",
               "RelativeToolTip": "DeadlyCorpGame\\Game.cpp",
-              "ViewState": "AQIAAOUAAAAAAAAAAAAAAEEBAAAAAAAA",
+              "ViewState": "AQIAAFABAAAAAAAAAAAAAGwBAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-10T07:10:58.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PremiumMoon.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\PremiumMoon.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\PremiumMoon.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\PremiumMoon.h",
-              "RelativeToolTip": "DeadlyCorpGame\\PremiumMoon.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-12T16:54:23.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SellableMoon.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\SellableMoon.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.h",
-              "RelativeToolTip": "DeadlyCorpGame\\SellableMoon.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-11T08:28:47.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SendableMoon.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\SendableMoon.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.h",
-              "RelativeToolTip": "DeadlyCorpGame\\SendableMoon.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-11T08:40:31.517Z",
+              "WhenOpened": "2024-04-13T11:16:15.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MoonManager.cpp",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\MoonManager.cpp",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\MoonManager.cpp",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\MoonManager.cpp",
-              "RelativeToolTip": "DeadlyCorpGame\\MoonManager.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-11T06:35:24.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PremiumMoon.cpp",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\PremiumMoon.cpp",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\PremiumMoon.cpp",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\PremiumMoon.cpp",
-              "RelativeToolTip": "DeadlyCorpGame\\PremiumMoon.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-12T16:54:18.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ItemManager.cpp",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\ItemManager.cpp",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\ItemManager.cpp",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\ItemManager.cpp",
-              "RelativeToolTip": "DeadlyCorpGame\\ItemManager.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-11T15:30:10.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DeadlyCorpGame.cpp",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\DeadlyCorpGame.cpp",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\DeadlyCorpGame.cpp",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\DeadlyCorpGame.cpp",
-              "RelativeToolTip": "DeadlyCorpGame\\DeadlyCorpGame.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-08T15:10:57.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Logger.h",
-              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Logger.h",
-              "RelativeDocumentMoniker": "DeadlyCorpGame\\Logger.h",
-              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\Logger.h",
-              "RelativeToolTip": "DeadlyCorpGame\\Logger.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Title": "SendableMoon.h",
+              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.h",
+              "RelativeDocumentMoniker": "DeadlyCorpGame\\SendableMoon.h",
+              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SendableMoon.h",
+              "RelativeToolTip": "DeadlyCorpGame\\SendableMoon.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-11T07:52:25.896Z"
+              "WhenOpened": "2024-04-13T11:14:41.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SellableMoon.h",
+              "DocumentMoniker": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.h",
+              "RelativeDocumentMoniker": "DeadlyCorpGame\\SellableMoon.h",
+              "ToolTip": "F:\\cpp_projects\\DeadlyCorpGame\\DeadlyCorpGame\\SellableMoon.h",
+              "RelativeToolTip": "DeadlyCorpGame\\SellableMoon.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-13T11:10:35.981Z",
+              "EditorCaption": ""
             }
           ]
         }

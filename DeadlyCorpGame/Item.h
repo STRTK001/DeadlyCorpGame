@@ -1,25 +1,55 @@
 #ifndef ITEM_H
 #define ITEM_H
 
+///
+/// Author: Travis Strawbridge
+/// Email: strtk001@mymail.unisa.edu.au
+/// student id: 110340713
+///
+
 #include <string>
 
 class Item
 {
 public:
-	Item(std::string name, int price) : name_(name), price_(price) {};
+	Item(
+		std::string name, int price,float scrapValMulti,float exSurvChance,
+		float opSurvChance, float exSaveChance,float lootRecovMulti
+		) : 
+		_name(name), _price(price), _scrapValueMultiplier(scrapValMulti),
+		_explorerSurvivalChanceMultiplier(exSurvChance),
+		_operatorSurvivalChanceMultiplier(opSurvChance), _explorerSaveChance(exSaveChance),
+		_lootRecoveryMultiplier(lootRecovMulti) {};
 
-	std::string name() const { return name_; };
-	int price() const { return price_; };
+	std::string name() const { return _name; };
+	int price() const { return _price; };
+
+	void calculateSimulationParameters
+	(
+		float& scrapValueMutli, float& explorerSurvivalChanceMulti,
+		float& operatorSurvivalChanceMulti, float& explorerSaveChance,
+		float& lootRecoveryMulti
+	)
+	{ 
+		scrapValueMutli *= _scrapValueMultiplier;
+		explorerSurvivalChanceMulti *= _explorerSurvivalChanceMultiplier;
+		operatorSurvivalChanceMulti *= _operatorSurvivalChanceMultiplier;
+		explorerSaveChance *= _explorerSaveChance;
+		lootRecoveryMulti *= _lootRecoveryMultiplier;
+	}
+
 private:
-	std::string name_;
+	std::string _name;
 
-	int price_;
+	int _price;
 	float
-		scrapValueMultiplier,
-		explorerSurvivalChanceMultiplier,
-		operatorSurvivalChanceMultiplier,
-		explorerSaveChance,
-		lootRecoveryMultiplier;
+		_scrapValueMultiplier,
+		_explorerSurvivalChanceMultiplier,
+		_operatorSurvivalChanceMultiplier,
+		_explorerSaveChance,
+		_lootRecoveryMultiplier;
+
+
 
 };
 

@@ -5,7 +5,11 @@
 #include <iostream>
 #include <chrono>
 #include <ctime>
-
+///
+/// Author: Travis Strawbridge
+/// Email: strtk001@mymail.unisa.edu.au
+/// student id: 110340713
+///
 
 /// <summary>
 /// Class for logging msgs to console.
